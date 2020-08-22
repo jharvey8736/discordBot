@@ -395,7 +395,7 @@ async def on_message(message):
         for word in word_list:
             extraStuff[author].num_words += 1
             extraStuff[author].num_chars += len(word)
-            if word in curse_set:
+            if word.lower() in curse_set:
                 extraStuff[author].num_curses += 1
             for char in word:
                 if ((ord(char) > 32 and ord(char) < 48) or (ord(char) > 57 and ord(char) < 65)
